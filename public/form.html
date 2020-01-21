@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Esther Zhao">
+  <meta charset="UTF-8">
+  <meta name="keywords" content="HTML,CSS,UCSD,CSE 135">
+  <link rel="stylesheet" type="text/css" href="./styles/main.css">
+</head>
+
+<body>
+  <header id="nav-bar">
+    <nav>
+      <a href="/index.html">Home</a> |
+      <a href="/images.html">Images</a> |
+      <a href="/tables_and_lists.html">Tables and Lists</a> |
+      <a href="/externals.html">Externals</a>
+    </nav>
+  </header>
+  <h1>Form</h1>
+  <div>
+    You are almost done with this application process!
+    <progress value="80" max="100" title="progress bar"></progress>80%
+  </div>
+
+  <form action="https://httpbin.org/post " method="POST" id="myForm">
+    Search:
+    <input type="search" placeholder="Search..." />
+    <fieldset title="Account Information">
+      <legend>Account Information</legend>
+      <label for="username">username:</label>
+      <input type="text" name="username" id="username" value="cse135_student" tabindex="1" readonly /><br>
+      password:
+      <input id="pass" type="password" name="password" maxlength="10" oninput="changeStrength()" autofocus tabindex="2"
+        required />
+      <meter min="0" max="100" low="40" high="70" optimum="90" value="10"></meter><br>
+      <script>
+        function changeStrength() {
+          let password = document.getElementById("pass").value;
+          if (password.length < 3) {
+            document
+              .getElementsByTagName("meter")[0]
+              .setAttribute("value", 10);
+          } else if (password.length < 7) {
+            document
+              .getElementsByTagName("meter")[0]
+              .setAttribute("value", 40);
+          } else {
+            document
+              .getElementsByTagName("meter")[0]
+              .setAttribute("value", 100);
+          }
+        }
+      </script>
+
+      E-mail:
+      <input type="email" name="email" tabindex="3" autocomplete="on" />
+      <input type="checkbox" name="subscribe" checked />Add me to the e-mail list.<br>
+
+      Upload a resume or coverletter (or both):
+      <input type="file" name="resume" tabindex="4" multiple /><br>
+
+      Github URL:
+      <input type="url" name="github" tabindex="5" /><br>
+
+      Phone number:
+      <input type="tel" name="phone" tabindex="6" /><br>
+
+      Age:
+      <input type="number" name="age" tabindex="7" /><br>
+      <div>
+        Select your gender:
+        <input type="radio" id="male" name="gender" tabindex="8" /><label for="male">Male</label>
+        <input type="radio" id="female" name="gender" tabindex="9" /><label for="female">Female</label>
+      </div>
+    </fieldset>
+    <fieldset title="Submission date information">
+      <legend>Date of submission</legend>
+      <div>
+        <input type="hidden" id="hiddenInput" value="This was a hidden input" />
+        <input type="button" onclick="showHidden()" value="Print hidden input type attribute" tabindex="10" />
+      </div>
+
+      <div>
+        Current date/time and time:
+        <input type="datetime-local" name="datetime-local" tabindex="11" />
+      </div>
+      <div>
+        Confirm the time:
+        <input type="time" name="time" tabindex="12" />
+      </div>
+      <div>
+        Enter the week:
+        <input type="week" name="week" tabindex="13" />
+      </div>
+
+      <div>
+        Enter the month:
+        <input type="month" name="month" disabled />
+        Enter the month code instead (3 letter code like JAN, FEB, MAR, ...):
+        <input type="text" name="monthCode" pattern="[A-Z]{3}" tabindex="14" />
+      </div>
+    </fieldset>
+    <fieldset title="Personal">
+      <legend>Personalization Questions</legend>
+      <div>
+        How would you rate this form?
+        <input id="rangeInput" type="range" min="0" max="10" onchange="changeRange()" />
+        <span id="rangeSpan"></span>
+      </div>
+      Birthday:
+      <input type="date" tabindex="15" /><br>
+      Select your favorite color:
+      <input type="color" name="favColor" value="#FF9D71" tabindex="16" /><br>
+      <div>
+        Enter your favorite holiday:
+        <input list="holidays" name="holiday" tabindex="17" />
+        <datalist id="holidays">
+          <option value="Valentine's Day"> </option>
+          <option value="Thanksgiving"> </option>
+          <option value="Christmas"> </option>
+          <option value="Memorial Day"> </option>
+          <option value="Halloween"> </option>
+        </datalist>
+      </div>
+      Comment any feedback:
+      <textarea name="Feedback" form="myForm" rows="10" cols="60" tabindex="18">Enter text here...</textarea>
+      <div>
+        Select your preferred breakfast:
+        <select form="myForm" id="sel" onchange="out.value=sel.value" tabindex="19">
+          <optgroup label="cereals">
+            <option value="fruity pebbles">Fruity Pebbles</option>
+            <option value="frosted flakes">Frosted Flakes</option>
+            <option value="honey nut cheerios">Honey Nut Cheerios</option>
+          </optgroup>
+          <optgroup label="fruits">
+            <option value="apple">Apple</option>
+            <option value="banana">Banana</option>
+            <option value="orange">Orange</option>
+          </optgroup>
+          <optgroup label="other">
+            <option value="oatmeal">Oatmeal</option>
+            <option value="bagel">Bagel</option>
+            <option value="egg">Egg</option>
+          </optgroup>
+        </select>
+        Output:
+        <output name="out" for="sel" form="myForm"></output>
+      </div>
+    </fieldset>
+    <div>
+      <input type="image" src="./img/gmail.png" alt="Submit to gmail" title="Submit to gmail" width="100"
+        tabindex="20" />
+    </div>
+    <input type="submit" value="Submit" tabindex="21" />
+    <input type="reset" value="reset form" tabindex="22" />
+  </form>
+
+  <script>
+    function showHidden() {
+      let elem = document.getElementById("hiddenInput");
+      alert("Type of hidden element is: " + elem.getAttribute("type"));
+    }
+
+    function changeRange() {
+      let span = document.getElementById("rangeSpan");
+      let val = document.getElementById("rangeInput").value;
+      span.innerHTML = val;
+    }
+  </script>
+</body>
+
+</html>

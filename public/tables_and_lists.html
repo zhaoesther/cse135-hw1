@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Tables & Lists</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Esther Zhao">
+  <meta charset="UTF-8">
+  <meta name="keywords" content="HTML,CSS,UCSD,CSE 135,tables,lists">
+  <link rel="stylesheet" type="text/css" href="./styles/main.css">
+</head>
+
+<body>
+  <header id="nav-bar">
+    <nav>
+      <a href="/index.html">Home</a> |
+      <a href="/images.html">Images</a> |
+      <a href="/form.html">Form</a> |
+      <a href="/externals.html">Externals</a>
+    </nav>
+  </header>
+  <h1>Tables & Lists</h1>
+  <span class="legend lecture">Lecture</span>
+  <span class="legend discussion">Discussion</span>
+  <span class="legend work">Work</span>
+  <span class="legend weekdays">Free time</span>
+  <span class="legend weekends">Weekend</span>
+  <table>
+    <caption>
+      Esther's Winter 2020 Schedule
+    </caption>
+    <colgroup>
+      <col id="time" span="1" />
+      <col class="weekdays" span="5" />
+      <col class="weekends" span="2" />
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Time</th>
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thur</th>
+        <th>Fri</th>
+        <th>Sat</th>
+        <th>Sun</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>8:00 AM</td>
+        <td class="lecture">CSE 135 LE</td>
+        <td></td>
+        <td class="lecture">CSE 135 LE</td>
+        <td></td>
+        <td class="lecture">CSE 135 LE</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>9:00 AM</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>10:00 AM</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>11:00 AM</td>
+        <td class="discussion">CSE 135 DI</td>
+        <td rowspan="2" class="lecture">CSE 141 LE</td>
+        <td></td>
+        <td rowspan="2" class="lecture">CSE 141 LE</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>12:00 PM</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>1:00 PM</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>2:00 PM</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="discussion">CSE 127 DI</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>3:00 PM</td>
+        <td></td>
+        <td></td>
+        <td rowspan="2" class="lecture">CSE 141L</td>
+        <td></td>
+        <td class="discussion">CSE 141 DI</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>4:00 PM</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>5:00 PM</td>
+        <td rowspan="2" class="lecture">CSE 127 LE</td>
+        <td></td>
+        <td rowspan="2" class="lecture">CSE 127 LE</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>6:00 PM</td>
+        <td></td>
+        <td class="work">Tutor Hours</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>7:00 PM</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="work">Tutor Hours</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>8:00 PM</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="work">Staff meeting</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>9:00 PM</td>
+        <td colspan="4">Homework</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>10:00 PM</td>
+        <td colspan="4">Homework</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>11:00 PM</td>
+        <td colspan="4">Homework</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>12:00 AM</td>
+        <td colspan="4">Sleep</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>1:00 AM</td>
+        <td colspan="4">Sleep</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>2:00 AM</td>
+        <td colspan="4">Sleep</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <h2>Things to do:</h2>
+  <ul>
+    <li class="done-item">CSE 135 Homework</li>
+    <li class="done-item">Shower</li>
+    <li>Read CSE 141 chapters 4.5-4.8</li>
+    <li>Refill water bottle for tomorrow</li>
+    <li class="done-item">Submit maintanence request for lightbulb</li>
+  </ul>
+
+  <h2>Grocery list:</h2>
+  <ol>
+    <li>Whole chicken (pre-cut)</li>
+    <li>Bag of celery</li>
+    <li>Bag of carrots</li>
+    <li>3 Yellow onions</li>
+    <li>Parsley</li>
+    <li>Thyme</li>
+    <li>Oat Milk</li>
+    <li>Dozen of eggs</li>
+    <li>Fruits</li>
+  </ol>
+  <h2>Vocabulary of the day</h2>
+  <p>One of my goals in 2020 is to be more eloquent.</p>
+  <dl>
+    <dt>Anomaly</dt>
+    <dd>(noun) Something different from the norm</dd>
+    <dt>Inure</dt>
+    <dd>(verb) To accept or grow accustomed to something undesirable</dd>
+    <dt>Mellifluous</dt>
+    <dd>(adj) sweet or musical; pleasant to hear</dd>
+    <dt>Serendipity</dt>
+    <dd>(noun) The occurrence and development of events by chance in a happy or beneficial way</dd>
+  </dl>
+
+</body>
+
+</html>

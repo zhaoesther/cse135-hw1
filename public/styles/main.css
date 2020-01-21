@@ -1,0 +1,158 @@
+* {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+code pre {
+  font-family: "Lucida Console", monospace;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+body {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+output, p {
+  color: #363636;
+}
+h1 {
+  font-size: 3.5rem;
+  text-align: center;
+  color: salmon;
+}
+h2 {
+  color: salmon;
+  font-size: 2rem;
+}
+h3 {
+  text-decoration: underline;
+}
+a {
+  font-size: 1rem;
+  text-decoration: none;
+}
+a:hover {
+  color: salmon;
+}
+img#selfie {
+  border-radius: 50%;
+  margin: 3rem;
+}
+
+.bolded {
+  font-weight: 1000;
+}
+#selfie {
+  grid-area: right;
+}
+#about {
+  grid-area: left;
+}
+#fun-facts {
+  padding: 2rem;
+  color: white;
+  background-color: lightsalmon;
+}
+
+#terminal {
+  width: 400px;
+  height: 280px;
+  padding: 1.5rem;
+  border-style: solid;
+  border-width: 2px;
+  border-color: lightsalmon;
+  background-image: url("../img/terminal.gif");
+  color: greenyellow;
+}
+footer {
+  margin-bottom: 1rem;
+}
+
+/* CSS Grid */
+
+/* index.html */
+.home-grid-container {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "left left right"
+}
+
+#gif-imgs {
+  grid-area: left;
+}
+#png-svg-imgs {
+  grid-area: middle;
+}
+/* images.html */
+.images-grid-container {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "left middle right"
+}
+
+.size-info {
+  margin-top: 0;
+  color: lightgray;
+}
+
+input {
+  margin-bottom: 0.5rem;
+}
+
+legend {
+  color: salmon;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+/* Tables */
+thead {
+  background-color: gold;
+}
+
+#time {
+  background-color:palegoldenrod;
+}
+.weekdays {
+  background-color: paleturquoise;
+}
+.weekends {
+  background-color:lightseagreen;
+}
+.lecture {
+  background-color: lightsalmon;
+}
+.discussion {
+  background-color: plum;
+}
+.work {
+  background-color: gray;
+  color: white;
+}
+.legend {
+  padding: 0.2rem;
+  margin: 0.5rem;
+}
+table {
+  margin: 2rem 0;
+}
+.done-item {
+  text-decoration: line-through;
+}
+dt {
+  text-decoration: underline;
+  font-size: 1.3rem;
+  font-weight: bolder;
+}
+dl {
+  padding: 2rem;
+  background-color: beige;
+}

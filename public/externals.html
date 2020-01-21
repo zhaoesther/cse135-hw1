@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Externals</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Esther Zhao">
+  <meta charset="UTF-8">
+  <meta name="keywords" content="HTML,CSS,UCSD,CSE 135">
+  <link rel="stylesheet" type="text/css" href="https://w3schools.com/w3css/4/w3.css">
+  <link href="https://fonts.googleapis.com/css?family=Slabo+27px&display=swap" rel="stylesheet">
+  <style>
+    * {
+      font-family: "Slabo 27px", serif;
+      font-weight: bold;
+    }
+
+    #tooltip {
+      background: #333;
+      color: white;
+      font-weight: bold;
+      padding: 4px 8px;
+      font-size: 13px;
+      border-radius: 4px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <header id="nav-bar">
+    <nav>
+      <a href="/index.html">Home</a> |
+      <a href="/images.html">Images</a> |
+      <a href="/form.html">Form</a> |
+      <a href="/tables_and_lists.html">Tables and Lists</a>
+    </nav>
+  </header>
+  <h1>Externals</h1>
+  <iframe src="https://cse135-hw1-32dd1.firebaseapp.com/index.html" width="500" height="300"></iframe>
+  <iframe width="555" height="300" src="https://www.youtube.com/embed/pmanD_s7G3U"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <video width="400" height="250" controls>
+    <source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <img src="https://media.giphy.com/media/9LZTcawH3mc8V2oUqk/giphy.gif" alt="Overwatch d.va pixel art" height="300">
+  <img src="https://cdn.dribbble.com/users/1402289/screenshots/3938717/pixel-dribbble.png" alt="sushi pixel art"
+    width="400">
+  <img src="https://i.pinimg.com/originals/6d/c3/34/6dc33449158ff00998997d8a91429474.jpg" height="300"
+    alt="neighborhood street">
+
+  <section>
+    <h2>Websites to pass time</h2>
+    <a href="https://youtube.com" target="_blank">Youtube</a>
+    <a href="https://twitch.tv" target="_blank">Twitch</a>
+    <a href="https://reddit.com/r/UCSD" target="_blank">UCSD Reddit</a>
+    <a href="https://crunchyroll.com" target="_blank">Crunchyroll</a>
+    <a href="https://urbanoutfitters.com" target="_blank">Urban Outfitters</a>
+  </section>
+
+  <h2>External scripts (hammer.js and chart.js)</h2>
+  <h3>hammer.js</h3>
+  <div id="responseElem" style="width: 250px;height:70px;background-color: papayawhip;">Tap, press, or drag your mouse
+    on me and see the response
+    detected!</div>
+  <div id="result"></div>
+  <h3>chart.js</h3>
+  <div style="width: 500px">
+    <canvas id="myChart"></canvas>
+  </div>
+
+  <h2>Load times</h2>
+  <ol>
+    <li>1/21/2020 4:06am, Load: 1.62 s, DOMContentLoaded: 317 ms</li>
+    <li>1/21/2020 4:06pm, Load: 1.42 s, DOMContentLoaded: 318 ms</li>
+    <li>1/21/2020 4:07am, Load: 1.44 s, DOMContentLoaded: 295 ms</li>
+    <li>1/21/2020 4:06pm, Load: 1.41 s, DOMContentLoaded: 259 ms</li>
+    <li>1/21/2020 4:06pm, Load: 1.62 s, DOMContentLoaded: 317 ms</li>
+    <li>1/21/2020 4:06pm, Load: 1.62 s, DOMContentLoaded: 317 ms</li>
+    <li>1/21/2020 4:06pm, Load: 1.62 s, DOMContentLoaded: 317 ms</li>
+    <li>1/21/2020 4:06pm, Load: 1.62 s, DOMContentLoaded: 317 ms</li>
+    <li>1/21/2020 4:06pm, Load: 1.62 s, DOMContentLoaded: 317 ms</li>
+    <li>1/21/2020 4:06pm, Load: 1.62 s, DOMContentLoaded: 317 ms</li>
+  </ol>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/hammerjs/2.0.8/hammer.min.js"></script>
+  <script>
+    var responseElem = document.getElementById('responseElem');
+    var result = document.getElementById('result');
+
+    // create a simple instance
+    // by default, it only adds horizontal recognizers
+    var mc = new Hammer(responseElem);
+
+    // listen to events...
+    mc.on("panleft panright tap press", function (ev) {
+      result.innerText = ev.type;
+    });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+  <script>
+    var ctx = document.getElementById('myChart');
+    var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['League of Legends', 'Fortnite', 'Maplestory'],
+        datasets: [{
+          label: '# of players',
+          data: [423456, 560230, 100000],
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)'
+          ],
+          borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)'
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>

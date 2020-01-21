@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Esther Zhao">
+  <meta charset="UTF-8">
+  <meta name="keywords" content="HTML,CSS,UCSD,CSE 135">
+  <link rel="stylesheet" type="text/css" href="./styles/main.css">
+</head>
+
+<body>
+  <header id="nav-bar">
+    <nav>
+      <a href="/images.html">Images</a> |
+      <a href="/form.html">Form</a> |
+      <a href="/tables_and_lists.html">Tables and Lists</a> |
+      <a href="/externals.html">Externals</a>
+    </nav>
+    <form id="greetingForm">
+      Choose the atmosphere:
+      <select form="greetingForm" id="sel" onchange="greeting.value=sel.value">
+        <option value="Hey" selected>Friendly</option>
+        <option value="Hi">Casual</option>
+        <option value="Welcome">Welcoming</option>
+        <option value="What's up">Slang</option>
+      </select>
+    </form>
+  </header>
+
+  <main>
+    <h1><output name="greeting" for="sel" form="greetingForm">Hey</output>, I'm Esther!</h1>
+    <section>
+      <div class="home-grid-container">
+        <div id="about">
+          <h2>About me</h2>
+          <p>I am currently a senior at <span class="bolded">UC San Diego</span> pursuing a <em>BS in Computer
+              Science</em>.
+            After studying Economics for 2 years, I took an introduction course to CS
+            by chance and discovered a passion for problem-solving through design and
+            software engineering.
+            I am from <i>Rowland Heights</i>, a small suburb east of <span class="bolded">Los Angeles</span>, which is
+            mainly populated by Chinese and Korean residents. There you will find
+            a surplus of boba shops and some of the most delicious food.</p>
+          <details>
+            <summary>Fun facts</summary>
+            <ul id="fun-facts">
+              <li>My zodiac sign is Capricorn</li>
+              <li>One of my favorite quotes is from the <em>Great Gatsby</em>: "So we beat on,
+                boats against the current, borne back ceaselessly into the past."</li>
+              <li>My favorite childhood game was Maplestory, and I was a night lord in the game.</li>
+              <li>My favorite animes of all time are Naruto and Inuyasha.</li>
+              <li>My favorite television show was Teen Titans on Cartoon Network.</li>
+              <li>I really like noodles and hot pot/shabu shabu</li>
+            </ul>
+          </details>
+        </div>
+        <img id="selfie" src="./img/Esther_Z.jpg" alt="Esther Z." width="300">
+      </div>
+    </section>
+    <section>
+      <h2>Hobbies</h2>
+      <h3>Current</h3>
+      <ul>
+        <li>Drawing, Graphic Design</li>
+        <li>Playing video games with friends (I like League of Legends and PUBG)</li>
+        <li>Listening to K-pop</li>
+        <li>Dancing</li>
+        <li>Learning foreign languages</li>
+      </ul>
+      <h3>Goals</h3>
+      <ul>
+        <li>Travelling</li>
+        <li>Cooking</li>
+        <li>Play tennis again</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <h2>Contact</h2>
+    <div id="terminal">
+      <code>echo "Connect with me"</code>
+      <pre>
+
+
+
+
+
+
+           if (interested == true) { 
+               connectWithMe();
+           } 
+
+           else {
+               exit();
+           } 
+      </pre>
+
+    </div>
+    <address>
+      <a href="https://linkedin.com/in/zhaoesther" target="_blank">LinkedIn</a>
+      <a href="mailto:ewzhao@ucsd.edu">ewzhao@ucsd.edu</a>
+    </address>
+  </footer>
+  <script src="./scripts/main.js"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="/__/firebase/7.7.0/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="/__/firebase/7.7.0/firebase-analytics.js"></script>
+
+  <!-- Initialize Firebase -->
+  <script src="/__/firebase/init.js"></script>
+</body>
+
+</html>
